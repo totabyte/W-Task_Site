@@ -12,3 +12,10 @@ nav{
   width: 100%;
   
 }
+.trapezio {
+    width: 200px;
+    height: 100px;
+    background-color: #5e232a;
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+  }
+  
