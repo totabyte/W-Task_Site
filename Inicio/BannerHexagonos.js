@@ -1,4 +1,10 @@
 function createHexagon() {
+    //Alterações a fazer 
+    /*
+    *Deixar a cor dos Hexágonos mais escura
+    *Aumentar o tamanho dos hexágonos
+    *Diminuir a Quantidade de hexágonos
+    */
     const hex = document.createElement("div");
     hex.classList.add("hexagon");
 
