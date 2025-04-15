@@ -1,0 +1,43 @@
+@charset "UTF-8";
+#banner {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    background-color: #4c071b; /* Fundo do banner */
+}
+
+.hexagon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(139, 0, 0, 0.7);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: float 7s infinite alternate ease-in-out, moveSideways 5s infinite alternate ease-in-out, fade 8s forwards;
+    filter: brightness(0.8);
+    opacity: 0;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+    to {
+        transform: translateY(100px) rotate(360deg);
+    }
+}
+
+@keyframes moveSideways {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
