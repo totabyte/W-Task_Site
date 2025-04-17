@@ -13,10 +13,24 @@ nav{ /* Barra de Navegação */
   width: 100%;
   
 }
-.trapezio {
-    width: 200px;
-    height: 100px;
-    background-color: #5e232a;
-    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
-  }
+#paralelogramo{
+  
+ 
+    width: 500px;
+    height: 45px;
+    
+    -webkit-transform: skew(-45deg); /* Inverte a inclinação */
+    -moz-transform: skew(-45deg);    /* Inverte a inclinação */
+    -ms-transform: skew(-45deg);     /* Inverte a inclinação */
+    -o-transform: skew(-45deg);      /* Inverte a inclinação */
+    transform: skew(-45deg);         /* Inverte a inclinação */
+  
+  
+    background-color:  rgba(139, 0, 0, 0.438);
+    display: inline-block;
+    position: relative;
+    right: -1600px ;
+    top: -15px;
+
+}
   
