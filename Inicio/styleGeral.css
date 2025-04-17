@@ -1,13 +1,14 @@
 @charset "UTF-8";
 body {
-    margin: 0;
+    margin: 0; /*Margin da página ocupa Tela Toda*/
+    
     background-color: #f4f4f4; /* Cor de fundo da página */
 }
-nav{
-    background-color: #5e232a ;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+nav{ /* Barra de Navegação */ 
+    background-color: #4c071b ; /*Cor de Fundo da Barra De Navegação*/ 
+    position: sticky;/*Posição Fixa*/
+    top: 0; /*Fica no topo da página*/
+    z-index: 1000; /*Fica Sobrepondo os outros elementos*/
     
   width: 100%;
   
