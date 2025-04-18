@@ -1,7 +1,11 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'Montserrat-Arabic';
+    src: url(Fontes/Montserrat-Arabic\ Bold.ttf) format('truetype');
+}
 body {
     margin: 0; /*Margin da página ocupa Tela Toda*/
-    
+    overflow-x: hidden; /*Remove a barra de rolagem horizontal*/
     background-color: #f4f4f4; /* Cor de fundo da página */
 }
 nav{ /* Barra de Navegação */ 
@@ -16,21 +20,35 @@ nav{ /* Barra de Navegação */
 #paralelogramo{
   
  
-    width: 500px;
+    width: 200px;
     height: 45px;
+    clip-path: polygon(
+    4% 0%, 
+    100% 0%, 
+    100% 100%, 
+    0% 100%
     
-    -webkit-transform: skew(-45deg); /* Inverte a inclinação */
-    -moz-transform: skew(-45deg);    /* Inverte a inclinação */
-    -ms-transform: skew(-45deg);     /* Inverte a inclinação */
-    -o-transform: skew(-45deg);      /* Inverte a inclinação */
-    transform: skew(-45deg);         /* Inverte a inclinação */
+    );
   
   
     background-color:  rgba(139, 0, 0, 0.438);
     display: inline-block;
     position: relative;
-    right: -1600px ;
+    left: 1130px; 
     top: -15px;
+
+}
+#TrabalheConosco {
+    color: white;
+    font-family: 'Montserrat-Arabic', sans-serif;
+    font-size: 20px;
+    display:inline-block ;
+    position: relative;
+    left: 914px;
+    top: -30px;
+    text-decoration: none; /* Remove o sublinhado do link */
+    padding: 10px 20px; /* Adiciona um pouco de preenchimento ao redor do texto */
+    font-size: 18.5px; /* Tamanho da fonte */
 
 }
   
