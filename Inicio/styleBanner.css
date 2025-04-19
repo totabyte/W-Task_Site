@@ -1,11 +1,59 @@
 @charset "UTF-8";
-
+@font-face {
+    font-family: 'Codec-Cold';
+    src: url(Fontes/codec-pro.regular.ttf) format('truetype');
+}
 #banner {
     position: relative;
-    height: 700px;
+    height: 600px;
     overflow: hidden;
-    background-color: #4c071b; /* Fundo do banner */
+    background-color: #4c071b;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    width: 100%;
 }
+
+#LinhaDiagonal {
+    position: absolute;
+    height: 4px;
+    width: 35.456vw; /* largura responsiva */
+    background-color: #dacbb7;
+    transform: rotate(-45deg);
+    top: 60%; /* ajuste vertical */
+    left: 10%; /* ajuste horizontal */
+    transform-origin: left center; /* ponto de rotação */
+    z-index: 1;
+    grid-row-start: 4;
+    
+}
+
+#LinhaHorizontal {
+    position: absolute;
+    height: 4.5px;
+    width: 36vw; /* largura responsiva */
+    background-color: #dacbb7;
+    top: calc(60% - 25vw); /* ajusta com base na diagonal */
+    left: calc(10% + 25vw); /* posição ao final da diagonal */
+    z-index: 1;
+    grid-row-start: 4;
+}
+
+#textoSobreNos{
+    position: absolute;
+    top: 32%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0px 70px;
+    text-align: start;
+    z-index: 2;
+    font-family: 'Codec-Cold', sans-serif;
+    line-height: 1.3;
+    
+}
+
 
 .hexagon {
     position: absolute;
