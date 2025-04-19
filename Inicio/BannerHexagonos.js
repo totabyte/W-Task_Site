@@ -23,3 +23,4 @@ function createHexagon() {
 }
 
 setInterval(createHexagon, 250);
+

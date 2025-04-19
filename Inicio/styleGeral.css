@@ -4,51 +4,81 @@
     src: url(Fontes/Montserrat-Arabic\ Bold.ttf) format('truetype');
 }
 body {
-    margin: 0; /*Margin da página ocupa Tela Toda*/
-    overflow-x: hidden; /*Remove a barra de rolagem horizontal*/
-    background-color: #f4f4f4; /* Cor de fundo da página */
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #4c071b;
 }
-nav{ /* Barra de Navegação */ 
-    background-color: #4c071b ; /*Cor de Fundo da Barra De Navegação*/ 
-    position: sticky;/*Posição Fixa*/
-    top: 0; /*Fica no topo da página*/
-    z-index: 1000; /*Fica Sobrepondo os outros elementos*/
-    
-  width: 100%;
-  
+.Corpo {
+    background-color: white;
 }
-#paralelogramo{
-  
- 
-    width: 200px;
-    height: 45px;
-    clip-path: polygon(
-    4% 0%, 
-    100% 0%, 
-    100% 100%, 
-    0% 100%
-    
-    );
-  
-  
-    background-color:  rgba(139, 0, 0, 0.438);
-    display: inline-block;
-    position: relative;
-    left: 1130px; 
-    top: -15px;
 
+nav {
+    background-color: #4c071b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr 2fr;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;
 }
+
+/* Container para alinhar TrabalheConosco acima do paralelogramo */
+
+
 #TrabalheConosco {
     color: white;
     font-family: 'Montserrat-Arabic', sans-serif;
-    font-size: 20px;
-    display:inline-block ;
-    position: relative;
-    left: 914px;
-    top: -30px;
-    text-decoration: none; /* Remove o sublinhado do link */
-    padding: 10px 20px; /* Adiciona um pouco de preenchimento ao redor do texto */
-    font-size: 18.5px; /* Tamanho da fonte */
-
+    font-size: 18.5px;
+    text-decoration: none;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    grid-column: 5;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
-  
+
+.ItensMenu {
+    color: white;
+    font-family: 'Montserrat-Arabic', sans-serif;
+    font-size: 18.5px;
+    text-decoration: none;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    
+    
+        
+}
+#menu {
+    display: inline-flex;
+    align-items: center;
+    justify-self: end;
+    grid-column: 4;
+}
+
+
+#paralelogramo {
+    width: 200px;
+    height: 45px;
+    clip-path: polygon(
+    5% 0%,
+    100% 0%, 
+    100% 100%, 
+    0% 100%
+    );
+    background-color: rgba(139, 0, 0, 0.438);
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-right: 0px;
+    position: sticky;
+    grid-column: 5  ;
+    
+}
