@@ -25,6 +25,7 @@
     transform-origin: left center; /* ponto de rotação */
     z-index: 1;
     grid-row-start: 4;
+    animation: EntradaLinhaDiagonal 1s forwards; /* animação de entrada */
     
 }
 
@@ -37,7 +38,11 @@
     left: calc(10% + 25vw); /* posição ao final da diagonal */
     z-index: 1;
     grid-row-start: 4;
+    animation: EntradaLinhaHorizontal 1s forwards; /* animação de entrada */
+    animation-delay: 0.8s;
+    opacity: 0;
 }
+
 
 #textoSobreNos{
     position: absolute;
@@ -51,6 +56,9 @@
     z-index: 2;
     font-family: 'Codec-Cold', sans-serif;
     line-height: 1.3;
+    opacity: 0;
+    animation: EntradaTexto 1s forwards; /* animação de entrada */
+    animation-delay: 0.8s;
     
 }
 
@@ -67,12 +75,12 @@
     0% 75%, 
     0% 25%
     );
-    animation: float 7s infinite alternate ease-in-out, moveSideways 5s infinite alternate ease-in-out, fade 8s forwards;
+    animation: flutuar 7s infinite alternate ease-in-out, moverLateralmente 5s infinite alternate ease-in-out, aparecerDesaparecer 8s forwards;
     filter: brightness(0.9);
     opacity: 0;
 }
 
-@keyframes float {
+@keyframes flutuar {
     from {
         transform: translateY(0) rotate(0deg);
     }
@@ -81,7 +89,7 @@
     }
 }
 
-@keyframes moveSideways {
+@keyframes moverLateralmente {
     from {
         transform: translateX(0);
     }
@@ -90,9 +98,22 @@
     }
 }
 
-@keyframes fade {
+@keyframes aparecerDesaparecer {
     0% { opacity: 0; }
     10% { opacity: 1; }
     90% { opacity: 1; }
     100% { opacity: 0; }
+}
+@keyframes EntradaLinhaDiagonal {
+    0% { transform: rotate(-45deg) translateX(-100%); }
+    100% { transform: rotate(-45deg) translateX(0); }
+}
+
+@keyframes EntradaLinhaHorizontal {
+    0% { opacity: 0; width: 0; }
+    100% { opacity: 1; width: 36vw; }
+}
+@keyframes EntradaTexto {
+    0% { opacity: 0;  }
+    100% { opacity: 1;  }
 }
