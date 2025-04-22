@@ -68,9 +68,12 @@ body {
     width: 391px;
     height: 237px;
     border-radius: 10px;
-    animation: Chegada 1s ease-in-out; /* animação de chegada */
+    opacity: 0;
 
-
+}
+#DivPort1 img.ChegadaAtiva{
+    animation: Chegada 1s ease-in-out;
+    opacity: 1;
 }
 
 #DivPort2{
@@ -83,8 +86,12 @@ body {
     width: 391px;
     height: 237px; 
     border-radius: 10px;
-    
+    opacity: 0;
 
+}
+#DivPort2 img.ChegadaAtiva{
+    animation: Chegada2 1s ease-in-out;
+    opacity: 1;
 }
 
 #DivPort3 {
@@ -98,10 +105,13 @@ body {
     width: 391px;
     height: 237px; 
     border-radius: 10px;
-    animation: Chegada 1s ease-in-out;
+    opacity: 0;
 
 }
-
+#DivPort3 img.ChegadaAtiva{
+    animation: Chegada 1s ease-in-out;
+    opacity: 1;
+}
 
 
 .DivPortConteudo{
@@ -123,22 +133,39 @@ body {
 }
 #DivPortConteudo1 h2{
     top: -21vh;
+    opacity: 0;
+    
+}
+#DivPortConteudo1 h2.ChegadaAtiva{
     animation: Chegada 1.1s ease-in-out;
     
+    opacity: 1;
 }
 
 #DivPortConteudo2 h2{
     top:  -49vh;
     left: 0vw;
     text-align: right; 
+    opacity: 0;
     
+}
+#DivPortConteudo2 h2.ChegadaAtiva{
+    animation: Chegada2 1.1s ease-in-out;
+    
+    opacity: 1;
 }
 
 #DivPortConteudo3 h2{
     top:  -6vh;
     left: 0vw;
     text-align: left;
+    opacity: 0;
+    
+}
+#DivPortConteudo3 h2.ChegadaAtiva{
     animation: Chegada 1.1s ease-in-out;
+    
+    opacity: 1;
 }
 
 
@@ -155,35 +182,66 @@ body {
 #LinhaHrzlPort1{
     left: 16%;
     top: 189%;
+    opacity: 0;
+}
+#LinhaHrzlPort1.ChegadaAtiva{
     animation: Chegada 1.2s ease-in-out;
+    
+    opacity: 1;
 }
 
 #LinhaHrzlPort2{
     left: 18%;
     top: 191%;
+    opacity: 0;
+}
+#LinhaHrzlPort2.ChegadaAtiva{
     animation: Chegada 1.3s ease-in-out;
+    
+    opacity: 1;
 }
 
 #LinhaHrzlPort3{
     right: 17%;
     top: 216%;
+    opacity: 0;
 }
-
+#LinhaHrzlPort3.ChegadaAtiva{
+    animation: Chegada2 1.2s ease-in-out;
+    
+    opacity: 1;
+}
 #LinhaHrzlPort4{
     right: 18%;
     top: 218%;
+    opacity: 0;
+}
+#LinhaHrzlPort4.ChegadaAtiva{
+    animation: Chegada2 1.3s ease-in-out;
+    
+    opacity: 1;
 }
 
 #LinhaHrzlPort5{
     left: 16%;
     top: 269%;
+    opacity: 0;
+}
+#LinhaHrzlPort5.ChegadaAtiva{
     animation: Chegada 1.2s ease-in-out;
+    
+    opacity: 1;
 }
 
 #LinhaHrzlPort6{
     left: 18%;
     top: 271%;
+    opacity: 0;
+}
+#LinhaHrzlPort6.ChegadaAtiva{
     animation: Chegada 1.3s ease-in-out;
+    
+    opacity: 1;
 }
 
 .DivPortBotao{
@@ -211,23 +269,42 @@ body {
 }
 #DivPort1 .DivPortBotao button{
     grid-column: 1;
+    opacity: 0;
+}
+#DivPort1 .DivPortBotao button.ChegadaAtiva{
     animation: Chegada 1.4s ease-in-out;
+    
+    opacity: 1;
 }
 
 #DivPort2 .DivPortBotao button{
     grid-column: 3;
     right: 3.4vw;
-   top:    232vh;
-     
+   top:    225vh;
+   opacity: 0;
+}
+#DivPort2 .DivPortBotao button.ChegadaAtiva{
+    animation: Chegada2 1.4s ease-in-out;
+    
+    opacity: 1;
 }
 
 #DivPort3 .DivPortBotao button{
     grid-column: 1;
     top: 278vh;
+    opacity: 0;
+}
+#DivPort3 .DivPortBotao button.ChegadaAtiva{
     animation: Chegada 1.4s ease-in-out;
+    
+    opacity: 1;
 }
 
 @keyframes Chegada {
-    0% {  transform: translateX(-100vw);}
-    100% {  transform: translateX(0);}
+    0% { transform: translateX(-100vw);  opacity: 0;}
+    100% {  transform: translateX(0); opacity: 1;}
+}
+@keyframes Chegada2 {
+    0% { transform: translateX(100vw);  opacity: 0;}
+    100% {  transform: translateX(0); opacity: 1;}
 }

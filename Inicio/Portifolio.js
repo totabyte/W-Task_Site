@@ -7,3 +7,4 @@ function MouseForaBotaoPort(elemento){
     elemento.style.backgroundColor = "transparent";
     elemento.style.color = "#000000";
 }
+
