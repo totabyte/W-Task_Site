@@ -9,6 +9,7 @@ body {
     overflow-x: hidden;
     background-color: #4c071b;
 }
+
 #CorpoPortifolio{
     width: 100%;
     background-color: #dacbb7;
@@ -42,12 +43,13 @@ body {
 
 #DivPortMain{
     grid-row: 2;
-    grid-template-rows: 3fr 3fr 3fr ;
-    grid-template-columns: 1fr 1fr 1fr;
     display: grid;
     width: 100%;
     height: 100%;
-    padding: 0px 0px;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colunas */
+    grid-template-rows: auto auto auto; /* 3 linhas */
+    gap: 2vw; /* espaço entre as divs */
+    
 }
 
 .DivPort{
@@ -60,23 +62,43 @@ body {
 #DivPort1{
     grid-column: 1;
     grid-row: 1;
+
 }
 #DivPort1 img{
     width: 391px;
     height: 237px;
     border-radius: 10px;
+    animation: Chegada 1s ease-in-out; /* animação de chegada */
+
 
 }
 
 #DivPort2{
     grid-column: 3;
-    grid-row: 1;
-    
+    grid-row: 1 / span 2; /* ocupa duas linhas */
+    margin-top: 30vh;  
+    margin-right: 5vw ;
 }
 #DivPort2 img{
     width: 391px;
     height: 237px; 
     border-radius: 10px;
+    
+
+}
+
+#DivPort3 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start; /* Isso empurra ela pro topo da célula da linha 2 */
+    margin-top: -20vw; /* Puxa ela um pouco pra cima */
+
+}
+#DivPort3 img{
+    width: 391px;
+    height: 237px; 
+    border-radius: 10px;
+    animation: Chegada 1s ease-in-out;
 
 }
 
@@ -90,36 +112,86 @@ body {
 }
 
 .DivPortConteudo h2{
-    
+    grid-row: 1;
     font-size: 29px;
     color: #000000;
     font-family: 'Montserrat-Arabic', sans-serif;
-    position: absolute;
+    position: relative;
+    
+    
+    
+}
+#DivPortConteudo1 h2{
+    top: -21vh;
+    animation: Chegada 1.1s ease-in-out;
     
 }
 
+#DivPortConteudo2 h2{
+    top:  -49vh;
+    left: 0vw;
+    text-align: right; 
+    
+}
+
+#DivPortConteudo3 h2{
+    top:  -6vh;
+    left: 0vw;
+    text-align: left;
+    animation: Chegada 1.1s ease-in-out;
+}
+
+
 .LinhaHrzlPort{
     position: absolute;
-    height: 4.5px;
+    grid-row: 2;
+    height: 0.5vh;
     width: 19vw;
     background-color: #4c071b;
+    
     
 }
 
 #LinhaHrzlPort1{
-    left: 20%;
-    top: 192%;
+    left: 16%;
+    top: 189%;
+    animation: Chegada 1.2s ease-in-out;
 }
 
 #LinhaHrzlPort2{
-    left: 22%;
-    top: 194%;
+    left: 18%;
+    top: 191%;
+    animation: Chegada 1.3s ease-in-out;
+}
+
+#LinhaHrzlPort3{
+    right: 17%;
+    top: 216%;
+}
+
+#LinhaHrzlPort4{
+    right: 18%;
+    top: 218%;
+}
+
+#LinhaHrzlPort5{
+    left: 16%;
+    top: 269%;
+    animation: Chegada 1.2s ease-in-out;
+}
+
+#LinhaHrzlPort6{
+    left: 18%;
+    top: 271%;
+    animation: Chegada 1.3s ease-in-out;
 }
 
 .DivPortBotao{
     grid-row: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: -20vh;
     
 }
 
@@ -128,13 +200,34 @@ body {
     color: #000000;
     font-family: 'Montserrat-Arabic', sans-serif;
     font-size: 16px;
-    border-radius: 8px;
+    border-radius: 8px; 
     border: 2px solid #4c071b;
-    padding: 5px 5px;
-    margin: 15px 15px;
+    height: 50px;
+    width: 100px;
     cursor: pointer; /* cursor pointer para indicar que é clicável */
+    position: absolute;
+    
     
 }
+#DivPort1 .DivPortBotao button{
+    grid-column: 1;
+    animation: Chegada 1.4s ease-in-out;
+}
 
+#DivPort2 .DivPortBotao button{
+    grid-column: 3;
+    right: 3.4vw;
+   top:    232vh;
+     
+}
 
+#DivPort3 .DivPortBotao button{
+    grid-column: 1;
+    top: 278vh;
+    animation: Chegada 1.4s ease-in-out;
+}
 
+@keyframes Chegada {
+    0% {  transform: translateX(-100vw);}
+    100% {  transform: translateX(0);}
+}
