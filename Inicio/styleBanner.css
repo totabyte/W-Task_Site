@@ -80,6 +80,50 @@
     opacity: 0;
 }
 
+@media screen and (min-width: 1327px){
+    #textoSobreNos{
+        top: 29%;
+    }
+}
+@media screen and (min-width: 1445px){
+    #textoSobreNos{
+        top: 25%;
+    }
+}
+@media screen and (min-width: 1550px){
+    #textoSobreNos{
+        top: 21%;
+    }
+}
+@media screen and (min-width: 1650px) {
+    #LinhaDiagonal{
+        width: 32.6vw;
+    }
+    #LinhaHorizontal{
+        top: calc(60% - 23vw);
+        left: calc(10% + 23vw);
+        width: 37vw;
+    }
+    #textoSobreNos{
+        left: 53%;
+    }
+}
+
+@media screen and (min-width: 1750px) {
+    #LinhaDiagonal{
+        width: 29.8vw;
+    }
+    #LinhaHorizontal{
+        top: calc(60% - 21vw);
+        left: calc(10% + 21vw);
+        width: 38vw;
+    }
+    #textoSobreNos{
+        left: 52%;
+        padding: 0px 80px;
+    }
+}
+
 @keyframes flutuar {
     from {
         transform: translateY(0) rotate(0deg);
@@ -111,7 +155,7 @@
 
 @keyframes EntradaLinhaHorizontal {
     0% { opacity: 0; width: 0; }
-    100% { opacity: 1; width: 36vw; }
+    100% { opacity: 1; width: 1; }
 }
 @keyframes EntradaTexto {
     0% { opacity: 0;  }
