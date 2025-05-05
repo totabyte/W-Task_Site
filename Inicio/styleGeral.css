@@ -79,12 +79,12 @@ body {
 #DivPort2{
     grid-column: 3;
     grid-row: 1 / span 2; /* ocupa duas linhas */
-    margin-top: 30vh;  
+    margin-top: 30vh;
     margin-right: 5vw ;
 }
 #DivPort2 img{
     width: 391px;
-    height: 237px; 
+    height: 237px;
     border-radius: 10px;
     opacity: 0;
 
@@ -103,7 +103,7 @@ body {
 }
 #DivPort3 img{
     width: 391px;
-    height: 237px; 
+    height: 237px;
     border-radius: 10px;
     opacity: 0;
 
@@ -118,7 +118,7 @@ body {
     grid-row: 2;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-   
+
 }
 
 .DivPortConteudo h2{
@@ -145,7 +145,7 @@ body {
 #DivPortConteudo2 h2{
     top:  -49vh;
     left: 0vw;
-    text-align: right; 
+    text-align: right;
     opacity: 0;
     
 }
@@ -299,6 +299,8 @@ body {
     
     opacity: 1;
 }
+
+
 
 @keyframes Chegada {
     0% { transform: translateX(-100vw);  opacity: 0;}
