@@ -8,5 +8,5 @@ function MouseForaBotaoPort(elemento){
     elemento.style.color = "#000000";
 }
 function AbrirFormulario(){
-    window.open('file:///C:/Users/ALUNO25/Desktop/TCC/W-Task_Site/Form_Ideal_Site/index.html', '_self');
+    window.open('../Form_Ideal_Site/form.html');
 }
