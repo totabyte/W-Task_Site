@@ -10,3 +10,5 @@ function MouseForaBotaoPort(elemento){
 function AbrirFormulario(){
     window.open('../Form_Ideal_Site/form.html');
 }
+
+
