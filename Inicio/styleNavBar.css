@@ -72,3 +72,19 @@ nav {
     grid-column: 5  ;
     
 }
+
+@media screen and (max-width: 700px){
+    .ItensMenu{
+        font-size: 15px;
+    }
+    #TrabalheConosco {
+        font-size: 13.9px;
+    }
+    #paralelogramo {
+        width: 150px;
+        height: 35px;
+        margin-top: 0;
+        margin-right: -13px;
+    }
+
+}
