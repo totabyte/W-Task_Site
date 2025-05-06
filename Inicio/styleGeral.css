@@ -322,13 +322,14 @@ body {
     #DivPort1 .DivPortBotao button{
         top: 177%;
     }
-
     #DivPort2{
         display: none;
     }
     #DivPort3{
         display: none;
     }
+
+    
 }
 
 @keyframes Chegada {
